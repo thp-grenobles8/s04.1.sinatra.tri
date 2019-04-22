@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super site de gossip, depuis le dossier views !</h1>
+    <p>Si tu veux créer un nouveau potin clique <a href="/gossips/new/">ici</a></p>
+    <p>Quel potin veux-tu afficher ?</p>
+    <form action='/get_index' method='POST'>
+      Saisis ici le numéro du potin :  <input type='text' name='id'/><br/>
+      <input type='submit'/>
+    	<% gossips.each_with_index do |gossip,index| %>
+        <p>	potin <a href="/gossips/<%= index %>/"> n°<%= index %></a>  déposé par <%= gossip.author %> </p>
+      <% end %>
+  </body>
+</html>
+

@@ -1,0 +1,16 @@
+
+
+<html>
+  <head>
+    <title>Page pour éditer</title>
+  </head>
+  <body>
+    <h1>Voici la page d'édition du potin n° <%= id %> </h1>
+    <form action='/gossips/<%= id %>/edit' method='POST'>
+      Saisis ici les modifications du potin :  <input type='text' name='modif'/><br/>
+      <input type='submit'/>
+   
+
+
+  </body>
+</html>
